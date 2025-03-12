@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A web application of Intherval System" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Amiril Mukminin" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InTherVal System</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Link for icon hamburger -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link for icon footer -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="nav-bar">
+            <li class="logo"><a href="./index.html"><img src="./_Assets/Intherval.jpg" alt="logo"></a></li>
+            <input type="checkbox" onclick="ubahMode()" id="checkbox_DM">
+            <p>Dark Mode</p>
+            <input type="checkbox" id="check">
+            <span class="menu-bar">
+                <li><a href="./index.html"><strong>Home</strong></a></li>
+                <li><a href="#sect-1"><strong>Profile</strong></a></li>
+                <li><a href="#sect-2"><strong>Galery</strong></a></li>
+                <!-- <li><a href="#sect-4"><strong>Event</strong></a></li> -->
+                <!-- <li><a href="#sect-5"><strong>Register</strong></a></li> -->
+                <li><a href="#contact-us"><strong>Contact Us</strong></a></li>
+                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+            </span>
+            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+        </ul>
+    </nav>
+    <!-- Slide show image -->
+    <header>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="./_Assets/kemenperin.jpg" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="./_Assets/BPOM.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="./_Assets/pringsewu.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <!--  -->
+        <!-- <div class="header-text">
+            <h1>Set-Up Consulting Present</h1><br>
+            <h3><em>"Grow Up Together"</em></h3>
+        </div>
+    </header> -->
+
+
+        <!-- Content -->
+        <main>
+            <section id="sect-1">
+                <!-- section 1 Expertise and Program (Section 1)-->
+                <div class="container">
+                    <div id="one">
+                        <img src="./_Assets/expertise1.png" alt="expertise">
+                        <h1>Expertise</h1>
+                        <p>InTherval System adalah perusahaan yang bergerak dibidang jasa pengujian kecukupan panas
+                            termal untuk berbagai jenis produk pangan. </p>
+                    </div>
+                    <div id="two">
+                        <img src="./_Assets/program1.png" alt="Program">
+                        <h1>Services</h1>
+                        <p>Produk layanan dari InTherVal System terdiri dari: Validasi F0 Sterilisasi Komersial,
+                            Validasi Nilai P Proses Pasteurisasi, Pelatihan Proses Termal, dan Konsultan Proses Termal
+                            Industri Pangan Olahan </p>
+                    </div>
+                    <div id="three">
+                        <img src="./_Assets/Food-safety2.jpg" alt="food safety">
+                        <h1>Food Safety Compliance</h1>
+                        <p>Berdasarkan PERBPOM No. 27 Tahun 2021 Tentang Persyaratan Pangan Olahan Berasam Rendah
+                            Dikemas Hermetis, Sterilisasi komersial yang menggunakan proses panas sebagaimana dimaksud
+                            dalam Pasal 4 harus memberikan kecukupan proses setara dengan nilai F0 sekurang-kurangnya
+                            3,0 (tiga koma nol) menit dihitung terhadap spora Clostridium botulinum dan dibuktikan
+                            dengan <strong>VALIDASI KECUKUPAN PROSES PANAS</strong> </p>
+                    </div>
+                    <div id="four">
+                        <img src="./_Assets/benefit.jpg" alt="Benefit Training">
+                        <h1>Why We Are Best</h1>
+                        <!-- <p> -->
+                        <ol>
+                            <li>Hasil uji F0 ditampilkan secara <strong>Realtime</strong>
+                            </li>
+                            <li>Nilai F0 diperoleh langsung saat pengujian</li>
+                            <li>Membantu menentukan suhu dan waktu sterilisasi serta pasteurisasi yang tepat dan
+                                akurat</li>
+                            <li>Harga kompetitif</li>
+                            <li>Sangat cocok untuk pengembangan produk baru dan revalidasi proses termal</li>
+                            <li>Hasil uji yang akurat dan peralatan terkalibrasi</li>
+                            <li>Inspektor dan Trainer kompeten dan berpengalaman</li>
+                        </ol>
+                        <!-- </p> -->
+                    </div>
+                </div>
+            </section>
+            <!--  -->
+            <!-- <section id="sect-2">
+                <div class="container-program"> -->
+            <!-- Specification type of training (section 2)-->
+            <!-- <div class="GMP">
+                        <img src="./_Assets/GMP.webp" alt="GMP">
+                        <h1>GMP Training</h1>
+                        <p>Set-Up Consulting is experts in providing GMP training. Good manufacturing practice (GMP) is
+                            a
+                            system for ensuring that products are consistently produced and controlled according to
+                            quality
+                            standards</p>
+                    </div> -->
+            <!-- <div class="HACCP">
+                        <img src="./_Assets/HACCP.jpg" alt="HACCP">
+                        <h1>HACCP Training</h1>
+                        <p>Set-Up Consulting is experts in providing HACCP training. HACCP is a management system in
+                            which
+                            food safety is addressed through the analysis and control of biological, chemical, and
+                            physical
+                            hazards from raw material production until end process.</p>
+                    </div> -->
+            <!-- <div class="Food-Handler">
+                        <img src="./_Assets/food-handler.png" alt="Food Handler">
+                        <h1>Food Handler Training</h1>
+                        <p>Set-Up Consulting is experts in providing Food Handler training. A food handler is anyone who
+                            works in a food business and who either handles food or touches surfaces that are likely to
+                            be
+                            in contact with food such as cutlery, plates and bowls.</p>
+                    </div>
+                    <div div class="Thermal">
+                        <img src="./_Assets/thermal.jpg" alt="Validation Thermal">
+                        <h1>Thermal Validation</h1>
+                        <p>Set-Up Consulting is experts in providing Thermal Validation training. Thermal validation is
+                            the
+                            process of validating / qualifying equipment and storage facilities to prove that they will
+                            create and maintain the temperatures they are designed for.</p>
+
+                    </div>
+                    <div class="Audit">
+                        <img src="./_Assets/audit.jpg" alt="Audit Internal">
+                        <h1>Food Safety Internal Audit</h1>
+                        <p>Set-Up Consulting is experts in providing Food Safety Internal Audit training. Internal food
+                            safety audits are systematic and independent assessments of your food safety practices,
+                            procedures and records. </p>
+                    </div> -->
+            <!-- End container Program -->
+            <!-- </div>
+            </section> -->
+
+            <!-- <section id="sect-3"> -->
+            <!-- Section 3 Selayang pandang -->
+            <!-- <div class="wrapper">
+                    <div class="container-info">
+                        <div class="hero-section">
+                            <div class="gallery">
+                                <div class="image-section">
+                                    <img src="./_Assets/gmp2.jpg" alt="GMP Info">
+                                </div>
+                                <div class="text-info">
+                                    <h1>GMP</h1>
+                                    <p>Good manufacturing practice guidelines provide guidance for manufacturing,
+                                        testing,
+                                        and
+                                        quality assurance in order to ensure that a manufactured product is safe for
+                                        human
+                                        consumption or use.
+                                    </p>
+                                    <a href="https://id.wikipedia.org/wiki/Cara_produksi_makanan_yang_baik"><strong>Read
+                                            more..</strong></a>
+                                </div>
+                            </div>
+
+                            <div class="gallery">
+                                <div class="image-section">
+                                    <img src="./_Assets/HACCP3.webp" alt="HACCP Info">
+                                </div>
+                                <div class="text-info">
+                                    <h1>HACCP</h1>
+                                    <p>HACCP is a systematic preventive approach to food safety from biological,
+                                        chemical,
+                                        and
+                                        physical hazards in production processes that can cause the finished product to
+                                        be
+                                        unsafe and designs measures to reduce these risks to a safe level.
+                                    </p>
+                                    <a
+                                        href="https://id.wikipedia.org/wiki/Analisis_bahaya_dan_pengendalian_titik_kritis"><strong>Read
+                                            more..</strong></a>
+                                </div>
+                            </div>
+
+                            <div class="gallery">
+                                <div class="image-section">
+                                    <img src="./_Assets/Validasi-Thermal.jpg" alt="Validasi Thermal Info">
+                                </div>
+                                <div class="text-info">
+                                    <h1>Thermal Validation</h1>
+                                    <p>Thermal Validation is the process of validating / qualifying equipment and
+                                        storage
+                                        facilities to prove that
+                                        they will create and maintain the temperatures they are designed for.
+                                    </p>
+                                    <a
+                                        href="https://id.wikipedia.org/wiki/Analisis_bahaya_dan_pengendalian_titik_kritis"><strong>Read
+                                            more..</strong></a>
+                                </div>
+                            </div>
+
+                            <div class="gallery">
+                                <div class="image-section">
+                                    <img src="./_Assets/audit-internal.jpg" alt="Audit Internal Info">
+                                </div>
+                                <div class="text-info">
+                                    <h1>Internal Audit</h1>
+                                    <p>Internal food safety audits are systematic and independent assessments of your
+                                        food
+                                        safety practices, procedures and records.
+                                    </p>
+                                    <a href="https://id.wikipedia.org/wiki/Staphylococcus_aureus_resisten-metisilin"><strong>Read
+                                            more..</strong></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </section> -->
+
+            <!-- Section 3 Testiomoni event -->
+            <!-- <section id="sect-4">
+                <div id="ig-containt">
+                    <img src="./_Assets/IG2.png" alt="IG">
+                    <h3 class="ig-text">@setupconsulting</h3>
+                </div>
+                <div class="container-event">
+                    <div class="myevent fades">
+                        <img src="./_Assets/Offline-subang1.jpg" alt="kegiatan offline di Subang" style="width:100%">
+                        <div class="event-text">Caption Text</div>
+                    </div>
+
+                    <div class="myevent fades">
+                        <img src="./_Assets/Offline-subang3.jpg" alt="kegiatan online materi" style="width:100%">
+                        <div class="event-text">Caption Text Two</div>
+                    </div>
+                    <div class="myevent fades">
+                        <img src="./_Assets/pelatihan-online2.jpg" alt="kegiatan offline di Subang 2"
+                            style="width:100%">
+                        <div class="event-text">Caption Text Three</div>
+                    </div>
+                    <div class="myevent fades">
+                        <img src="./_Assets/pelatihan-online3.jpg" alt="kegiatan online" style="width:100%">
+                        <div class="event-text">Caption Text Four</div>
+                    </div> -->
+
+            <!-- <a class="ev-prev" onclick="plusSlides(-1)">❮</a>
+                <a class="ev-next" onclick="plusSlides(1)">❯</a> -->
+
+            <!-- </div>
+                <br>
+
+                <div style="text-align:center">
+                    <span class="ev-dot" onclick="currentSlide(1)"></span>
+                    <span class="ev-dot" onclick="currentSlide(2)"></span>
+                    <span class="ev-dot" onclick="currentSlide(3)"></span>
+                    <span class="ev-dot" onclick="currentSlide(4)"></span>
+                </div>
+            </section> -->
+
+            <!-- Section for responsive picture -->
+            <!-- <section> -->
+            <!-- Responsive picture -->
+            <!-- <h1 class="H1-legalitas">Complete Your Product Legality</h1>
+                <figure>
+                    <picture class="image-legalitas">
+                        <source media="(max-width:600px)" srcset="./_Assets/Bussines_Legal(500).png">
+                        <source media="(max-width:700px)" srcset="./_Assets/Bussines_Legal(600).jpg">
+                        <source media="(max-width:800px)" srcset="./_Assets/Bussines_Legal(700).jpg">
+                        <source media="(max-width:900px)" srcset="./_Assets/Bussines_Legal(800).jpg">
+                        <source media="(max-width:1000px)" srcset="./_Assets/Bussines_Legal(900).jpg">
+                        <img src="./_Assets/Bussines_Legal.png" alt="Legalitas">
+
+                    </picture>
+                </figure>
+            </section> -->
+
+
+            <!-- Section 6 video youtube -->
+            <!-- <section>
+                <h1 class="head-section3">Food Safety Implementation!</h1>
+                <div class="video-Food-Safety">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/QBts_xSV2wo?si=wb3Zgi_oa_8sgDrt"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </section> -->
+
+            <!--  -->
+            <!-- <section id="sect-5">
+                <div class="register">
+                    <h2>Register Form</h2>
+                    <div id="user-form">
+                        <form action="#">
+                            <fieldset>
+                                <legend>Register</legend>
+                                <div class="form-user-regis"> -->
+            <!-- First Name -->
+            <!-- <label for="fname">First Name:</label><br>
+                                    <input type="text" id="fname" placeholder=" First Name"><br><br> -->
+            <!-- Last Name -->
+            <!-- <label for="lname">Last name:</label><br>
+                                    <input type="text" id="lname" placeholder="Last name"><br><br> -->
+            <!-- Birthday -->
+            <!-- <label for="birthday">Birthday:</label><br>
+                                    <input type="date" id="birthday" name="birthday"><br><br> -->
+            <!-- Email -->
+            <!-- <label for="email">Enter your email:</label><br>
+                                    <input type="email" id="email" name="email"><br><br>
+                                    <p>What training you want to join?</p> -->
+            <!-- option 1 -->
+            <!-- <input type="radio" id="gmp" name="gmp" value="gmp">
+                                    <label for="gmp">GMP</label> -->
+
+            <!-- option 2 -->
+            <!-- <input type="radio" id="haccp" name="haccp" value="haccp">
+                                    <label for="haccp">HACCP</label> -->
+
+            <!-- option 3 -->
+            <!-- <input type="radio" id="food-h" name="food-h" value="food-h">
+                                    <label for="food-h">Food Handler</label> -->
+            <br>
+            <!-- option 4 -->
+            <!-- <input type="radio" id="val-thermal" name="val-thermal" value="val-thermal">
+                                    <label for="val-thermal">Thermal Validation</label> -->
+
+            <!-- option 5 -->
+            <!-- <input type="radio" id="audit" name="audit" value="audit">
+                                    <label for="audit">Food Safety Internal Audit</label><br><br> -->
+
+            <!-- Favorit color -->
+            <!-- <label for="favcolor">Select your favorite color:</label>
+                                    <input type="color" id="favcolor" name="favcolor" value="#2dd5e1"><br><br> -->
+
+            <!-- <p>Tell us what do you think about Food Safety?</p>
+                                    <textarea id="text-ciamis" name="text-ciamis" rows="4" cols="50"></textarea><br>
+                                    <br> -->
+            <!-- <button type="submit" onclick="myFunction()">Sign Up</button> -->
+            <!-- 
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </section> -->
+            <!-- Whatsapp link -->
+            <section>
+                <div class="wa-float">
+                    <a href="https://wa.me/6281287411790"><img src="./_Assets/WhatsApp.png" alt="Whatsapp"></a>
+                </div>
+            </section>
+        </main>
+
+        <!-- adreess -->
+        <footer class="footer" id="contact-us">
+            <div class="footer-left">
+                <div class="sc">
+                    <img src="./_Assets/Intherval.jpg" alt="Logo IS">
+                </div>
+                <p class="footer-copyright">copyright: InTherVal System</p>
+            </div>
+
+            <div class="footer-center">
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>Indonesia</span> Sidoarjo, Jawa Timur</p>
+                </div>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>+62 812 8741 1790</p>
+                </div>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="#">inthervalsystem@gmail.com</a></p>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <p class="footer-about">
+                    <span>About</span>
+                    This Channel about Thermal Process Validation and Training. Let's grow up together with us!
+                </p>
+
+                <div class="footer-media">
+                    <a href="https://www.youtube.com/watch?v=rZX3GdoNWEw"><i class="fa fa-youtube"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/intherval_system?igsh=MWpxdTQ1NWttazZrOA=="><i
+                            class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+
+        </footer>
+
+        <!-- script JS -->
+        <script src="index.js"></script>
+</body>
+
+</html>
