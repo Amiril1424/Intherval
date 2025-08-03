@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "Roboto";
-    src: url(./_Assets/Roboto/Roboto-Regular.ttf);
+    font-family: Arial, sans-serif;
+    /* src: url(./_Assets/Roboto/Roboto-Regular.ttf); */
 }
 
 /* CSS for styling Horizontal Navbar */
@@ -13,7 +13,7 @@
 body {
     --color1: #353535;
     --color2: white;
-    font-family: "Roboto", serif;
+    font-family: Arial, sans-serif;
     background-color: rgb(248, 247, 247);
     color: #5a5a5a;
     transition: 0.5s;
@@ -21,23 +21,28 @@ body {
 }
 
 /* Navigation */
-.nav-bar {
-    width: 100%;
-    margin-top: 0px;
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
-    list-style: none;
-    position: relative;
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
     background-color: var(--color2);
-    padding: 12px 50px;
-    border-bottom: 1px solid rgb(223, 218, 218);
-    box-shadow: 1px 1px 8px 5px #888888;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/*  */
-.logo img {
-    width: 70px;
+
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+/* ===== Logo ===== */
+.nav-bar .logo img {
+    height: 50px;
 }
 
 .menu-bar {
@@ -96,13 +101,12 @@ body {
 @media screen and (max-width:1100px) {
     .menu-bar {
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 50%;
-        height: 100vh;
         position: fixed;
         top: 0;
         right: -100%;
+        height: 100vh;
+        width: 250px;
+        padding: 80px 20px 20px;
         z-index: 100;
         background-color: var(--color2);
         transition: all 0.2s ease-in-out;
@@ -125,58 +129,6 @@ body {
         right: 0;
     }
 }
-
-/* Dark Mode */
-.nav-bar #checkbox_DM {
-    margin-right: 10px;
-    margin-left: 30px;
-}
-
-.nav-bar p {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.dark-mode {
-    background-color: black;
-    color: white;
-}
-
-input[type="checkbox"] {
-    position: relative;
-    width: 40px;
-    height: 20px;
-    appearance: none;
-    background-color: #434343;
-    outline: none;
-    border-radius: 10px;
-    transition: 0.5s ease;
-    cursor: pointer;
-
-}
-
-input[type="checkbox"]:checked {
-    background-color: #9dd10e;
-}
-
-
-input[type="checkbox"]::before {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    background-color: rgb(252, 250, 250);
-    border-radius: 50%;
-    top: 2px;
-    left: 2px;
-    transition: 0.5s ease;
-}
-
-input[type="checkbox"]:checked::before {
-    transform: translateX(20px);
-
-}
-
 
 /* Image Slider */
 .mySlides {
