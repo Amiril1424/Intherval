@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daftar Peserta Bersertifikat</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+      margin: 0;
+      padding: 20px;
+      color: #1e293b;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .filters {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    select {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      background: white;
+      min-width: 180px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    thead {
+      background: #1e3a8a;
+      color: white;
+    }
+    th, td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #e2e8f0;
+      text-align: left;
+    }
+    tr:hover {
+      background: #f1f5f9;
+    }
+    .hidden { display: none; }
+
+    /* Tombol Unduh */
+    .download-link {
+      display: inline-block;
+      padding: 6px 12px;
+      background: #2563eb;
+      color: white;
+      border-radius: 6px;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .download-link:hover {
+      background: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Daftar Sertifikat Peserta Pelatihan InTherVal System</h1>
+
+  <!-- Dropdown filter -->
+  <div class="filters">
+    <select id="pelatihan">
+      <option value="">Pilih Jenis Pelatihan</option>
+      <option value="pest">Pelatihan Pest Control</option>
+      <option value="haccp1">Pelatihan Pengelolaan HACCP</option>
+      <option value="haccp2">Pelatihan Penyusunan Dokumen HACCP</option>
+      <option value="cppob">Pelatihan CPPOB</option>
+      
+    </select>
+    <select id="tahun" disabled>
+      <option value="">Pilih Tahun Pelatihan</option>
+      <option value="2023">2023</option>
+      <option value="2024">2024</option>
+      <option value="2025">2025</option>
+    </select>
+  </div>
+
+  <!-- Tabel peserta -->
+  <table id="tabelPeserta" class="hidden">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Nama Peserta</th>
+        <th>Instansi</th>
+        <th>No Sertifikat</th>
+        <th>Tanggal Lulus</th>
+        <th>Unduh Sertifikat</th>
+      </tr>
+    </thead>
+    <tbody id="tbody">
+      <!-- Contoh data -->
+      <tr data-pelatihan="pest" data-tahun="2025">
+        <td>1</td>
+        <td>David Wongkar</td>
+        <td>PT. Sabu Mandiri Sejahtera</td>
+        <td>001/IS/PC/VIII/2025</td>
+        <td>16 Agustus 2025</td>
+        <td><a href="##" class="download-link" download>Unduh</a></td>
+      </tr>
+      <tr data-pelatihan="pest" data-tahun="2025">
+        <td>2</td>
+        <td>Ivan Rizki Pratama</td>
+        <td>PT. Fisnack Inovasi Pangan</td>
+        <td>002/IS/PC/VIII/2025</td>
+        <td>16 Agustus 2025</td>
+        <td><a href="##" class="download-link" download>Unduh</a></td>
+      </tr>
+      <tr data-pelatihan="pest" data-tahun="2025">
+        <td>3</td>
+        <td>Jane Tanwijaya</td>
+        <td>PT. Rumah Bahagia Sejahtera</td>
+        <td>003/IS/PC/VIII/2025</td>
+        <td>16 Agustus 2025</td>
+        <td><a href="##" class="download-link" download>Unduh</a></td>
+      </tr>
+      <tr data-pelatihan="pest" data-tahun="2025">
+        <td>4</td>
+        <td>Muhammad Arif Dermawan</td>
+        <td>PT. Sedari Alam Nusantara</td>
+        <td>004/IS/PC/VIII/2025</td>
+        <td>16 Agustus 2025</td>
+        <td><a href="##" class="download-link" download>Unduh</a></td>
+      </tr>
+      <tr data-pelatihan="pest" data-tahun="2025">
+        <td>5</td>
+        <td>Pamela Teh Charlynn</td>
+        <td>PT. Rumah Bahagia Sejahtera</td>
+        <td>005/IS/PC/VIII/2025</td>
+        <td>16 Agustus 2025</td>
+        <td><a href="##" class="download-link" download>Unduh</a></td>
+      </tr>
+      <tr data-pelatihan="pest" data-tahun="2025">
+        <td>6</td>
+        <td>Saifuddin</td>
+        <td>PT. Sedari Alam Nusantara</td>
+        <td>006/IS/PC/VIII/2025</td>
+        <td>16 Agustus 2025</td>
+        <td><a href="##" class="download-link" download>Unduh</a></td>
+      </tr>
+      <tr data-pelatihan="pest" data-tahun="2025">
+        <td>7</td>
+        <td>Sukma Maharani</td>
+        <td>PT. Tujuh Asa Bersemi</td>
+        <td>007/IS/PC/VIII/2025</td>
+        <td>16 Agustus 2025</td>
+        <td><a href="##" class="download-link" download>Unduh</a></td>
+      </tr>
+      <tr data-pelatihan="pest" data-tahun="2025">
+        <td>8</td>
+        <td>Zidan Hakim</td>
+        <td>PT. Sedari Alam Nusantara</td>
+        <td>008/IS/PC/VIII/2025</td>
+        <td>16 Agustus 2025</td>
+        <td><a href="##" class="download-link" download>Unduh</a></td>
+      </tr>
+      <tr data-pelatihan="haccp1" data-tahun="2024">
+        <td>1</td>
+        <td>Fenny Apriliani, S.TP., M.Si</td>
+        <td>Politeknik Negeri Subang</td>
+        <td>001/11/IS/V/2024</td>
+        <td>26-28 Mei 2024</td>
+        <td><a href="##" class="download-link" download>Unduh</a></td>
+      </tr>
+      <tr data-pelatihan="haccp1" data-tahun="2024">
+        <td>2</td>
+        <td>Fitri Suciati, S.Pt., M.Sc</td>
+        <td>Politeknik Negeri Subang</td>
+        <td>002/11/IS/V/2024</td>
+        <td>26-28 Mei 2024</td>
+        <td><a href="##" class="download-link" download>Unduh</a></td>
+      </tr>
+      <tr data-pelatihan="haccp1" data-tahun="2024">
+        <td>3</td>
+        <td>Hanik Atus Sangadah, S.TP., M.T</td>
+        <td>Politeknik Negeri Subang</td>
+        <td>003/11/IS/V/2024</td>
+        <td>26-28 Mei 2024</td>
+        <td><a href="##" class="download-link" download>Unduh</a></td>
+      </tr>
+      <tr data-pelatihan="haccp1" data-tahun="2024">
+        <td>4</td>
+        <td>Wiwik Endah Rahayu, S.TP., M.Si</td>
+        <td>Politeknik Negeri Subang</td>
+        <td>004/11/IS/V/2024</td>
+        <td>26-28 Mei 2024</td>
+        <td><a href="##" class="download-link" download>Unduh</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    const pelatihan = document.getElementById('pelatihan');
+    const tahun = document.getElementById('tahun');
+    const tabel = document.getElementById('tabelPeserta');
+    const rows = document.querySelectorAll('#tbody tr');
+
+    // Aktifkan dropdown tahun setelah pilih pelatihan
+    pelatihan.addEventListener('change', () => {
+      tahun.disabled = pelatihan.value === "";
+      filterData();
+    });
+
+    tahun.addEventListener('change', filterData);
+
+    function filterData() {
+      const p = pelatihan.value;
+      const t = tahun.value;
+      let visible = 0;
+
+      rows.forEach(row => {
+        const rp = row.getAttribute('data-pelatihan');
+        const rt = row.getAttribute('data-tahun');
+        if ((!p || rp === p) && (!t || rt === t)) {
+          row.style.display = "";
+          visible++;
+        } else {
+          row.style.display = "none";
+        }
+      });
+
+      // Tampilkan tabel kalau ada data
+      tabel.classList.toggle('hidden', visible === 0);
+    }
+  </script>
+</body>
+</html>
