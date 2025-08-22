@@ -241,6 +241,54 @@
         height: 60px;
     }
         
+    /* === Responsive Table === */
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 15px;
+    border-radius: 10px;
+  }
+
+  table {
+    width: 100%;
+    min-width: 700px; /* biar kolom gak sempit di mobile */
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+
+  thead {
+    background: #1e3a8a;
+    color: white;
+  }
+
+  th, td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+    font-size: 14px;
+    white-space: nowrap; /* supaya teks gak pecah baris */
+  }
+
+  tr:hover {
+    background: #f1f5f9;
+  }
+
+  /* Responsive font & padding untuk layar kecil */
+  @media (max-width: 600px) {
+    th, td {
+      padding: 8px 10px;
+      font-size: 12px;
+    }
+    .download-link {
+      font-size: 12px;
+      padding: 4px 8px;
+    }
+  }
+
 
   </style>
 </head>
@@ -282,7 +330,8 @@
   </div>
 
   <!-- Tabel peserta -->
-  <table id="tabelPeserta" class="hidden">
+  <div class="table-container">
+    <table id="tabelPeserta" class="hidden">
     <thead>
       <tr>
         <th>No</th>
@@ -393,6 +442,8 @@
       </tr>
     </tbody>
   </table>
+  </div>
+  
 
   <!-- WhatsApp Floating Button -->
   <a href="https://wa.me/6281410857399" class="wa-float" target="_blank">
