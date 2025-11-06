@@ -143,6 +143,79 @@
       "tanggal_lulus": "26-28 Mei 2024",
       "link_sertifikat": "##",
       "phone": "081287411790"
+    },
+    {
+      "uid": "haccp1-2025-001",
+      "pelatihan": "haccp1",
+      "tahun": "2025",
+      "id": 1,
+      "nama": "Desi Triastuti, S.TP., M.P",
+      "instansi": "Politeknik Negeri Subang",
+      "nomor_sertifikat": "001/IS/HACCP/XI/2025",
+      "tanggal_lulus": "06-08 November 2025",
+      "link_sertifikat": "https://drive.google.com/file/d/1UskrIFH_3jfdH1YAMqhwTmsfyosvZX6p/view?usp=sharing",
+      "phone": "085227987280"
+    },
+    {
+      "uid": "haccp1-2025-002",
+      "pelatihan": "haccp1",
+      "tahun": "2025",
+      "id": 1,
+      "nama": "Erin Nur Fitriani, S.T.P., M.T.P",
+      "instansi": "Politeknik Negeri Subang",
+      "nomor_sertifikat": "002/IS/HACCP/XI/2025",
+      "tanggal_lulus": "06-08 November 2025",
+      "link_sertifikat": "https://drive.google.com/file/d/1fmqw5ZgZcbHkrAJbJpR5b7oi_MUcEmPh/view?usp=sharing",
+      "phone": "087874943274"
+    },
+    {
+      "uid": "haccp1-2025-003",
+      "pelatihan": "haccp1",
+      "tahun": "2025",
+      "id": 1,
+      "nama": "Irna Dwi Destiana, S.Pd., M.Si",
+      "instansi": "Politeknik Negeri Subang",
+      "nomor_sertifikat": "003/IS/HACCP/XI/2025",
+      "tanggal_lulus": "06-08 November 2025",
+      "link_sertifikat": "https://drive.google.com/file/d/1iS-zU2yeYV6rNK7tlYQkckuBkxvx5WMM/view?usp=sharing",
+      "phone": "081797117476"
+    },
+    {
+      "uid": "haccp1-2025-004",
+      "pelatihan": "haccp1",
+      "tahun": "2025",
+      "id": 1,
+      "nama": "Muhammad Abdillah Hasan Qonit, S.T.P., M.T.P",
+      "instansi": "Politeknik Negeri Subang",
+      "nomor_sertifikat": "004/IS/HACCP/XI/2025",
+      "tanggal_lulus": "06-08 November 2025",
+      "link_sertifikat": "https://drive.google.com/file/d/1CQ8rxrRgNV5WzvPGwyRaIQWUTn4oW850/view?usp=sharing",
+      "phone": "082130628136"
+    },
+    {
+      "uid": "haccp1-2025-005",
+      "pelatihan": "haccp1",
+      "tahun": "2025",
+      "id": 1,
+      "nama": "Rahmi Rahmawati, S.T.P., M.T.P",
+      "instansi": "Politeknik Negeri Subang",
+      "nomor_sertifikat": "005/IS/HACCP/XI/2025",
+      "tanggal_lulus": "06-08 November 2025",
+      "link_sertifikat": "https://drive.google.com/file/d/1_eo0Mgeziaylmp40fnZqm_5PX5uSLwBL/view?usp=sharing",
+      "phone": "082215253077"
+    },
+    {
+      "uid": "haccp1-2025-006",
+      "pelatihan": "haccp1",
+      "tahun": "2025",
+      "id": 1,
+      "nama": "Rohayati Suci Indrianingsih, S.P., M.Agr",
+      "instansi": "Politeknik Negeri Subang",
+      "nomor_sertifikat": "006/IS/HACCP/XI/2025",
+      "tanggal_lulus": "06-08 November 2025",
+      "link_sertifikat": "https://drive.google.com/file/d/154QV02iMgWrD2oXvDH-tpIiauw3km3rk/view?usp=sharing",
+      "phone": "083148085028"
     }
+
   ]
 }
