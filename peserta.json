@@ -215,7 +215,49 @@
       "tanggal_lulus": "06-08 November 2025",
       "link_sertifikat": "https://drive.google.com/file/d/154QV02iMgWrD2oXvDH-tpIiauw3km3rk/view?usp=sharing",
       "phone": "083148085028"
+    },
+    {
+      "uid": "AuditIntr-2025-001",
+      "pelatihan": "AuditIntr",
+      "tahun": "2025",
+      "id": 1,
+      "nama": "Fenny Aprilliani, S.TP., M.Si",
+      "instansi": "Politeknik Negeri Subang",
+      "nomor_sertifikat": "001/IS/IFSA/XI/2025",
+      "tanggal_lulus": "20-22 November 2025",
+      "link_sertifikat": "https://drive.google.com/file/d/1Fc-cnoDkiNT1XAER_OLqOZVznsu8SjzI/view?usp=sharing",
+      "phone": "085171170920"
+    },
+    {
+      "uid": "AuditIntr-2025-002",
+      "pelatihan": "AuditIntr",
+      "tahun": "2025",
+      "id": 1,
+      "nama": "Fitri Suciati, S.Pt., M.Sc",
+      "instansi": "Politeknik Negeri Subang",
+      "nomor_sertifikat": "002/IS/IFSA/XI/2025",
+      "tanggal_lulus": "20-22 November 2025",
+      "link_sertifikat": "https://drive.google.com/file/d/1VefX8Vpkxa54gDVeYaA20L1SVmtiKUrG/view?usp=sharing",
+      "phone": "087821909033"
+    },
+    {
+      "uid": "AuditIntr-2025-003",
+      "pelatihan": "AuditIntr",
+      "tahun": "2025",
+      "id": 1,
+      "nama": "Hanik Atus Sangadah, S.TP., M.T",
+      "instansi": "Politeknik Negeri Subang",
+      "nomor_sertifikat": "003/IS/IFSA/XI/2025",
+      "tanggal_lulus": "20-22 November 2025",
+      "link_sertifikat": "https://drive.google.com/file/d/1KKxXXDoyCz5U0v40FM1ZE1eThk9JyxO2/view?usp=sharing",
+      "phone": "085640884030"
     }
+
+
+
+
+
+
 
   ]
 }
