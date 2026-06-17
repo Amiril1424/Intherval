@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Dummy foto Food Safety Training</title>
+  <desc id="desc">Placeholder foto dokumentasi pelatihan keamanan pangan.</desc>
+  <rect width="1200" height="800" fill="#eef5ff"/>
+  <rect x="70" y="80" width="1060" height="640" rx="26" fill="#ffffff" stroke="#d7e2f2" stroke-width="4"/>
+  <circle cx="290" cy="292" r="70" fill="#2378d0"/>
+  <circle cx="450" cy="292" r="70" fill="#2378d0" opacity=".75"/>
+  <circle cx="610" cy="292" r="70" fill="#2378d0" opacity=".5"/>
+  <rect x="220" y="430" width="760" height="34" rx="10" fill="#173768"/>
+  <rect x="280" y="500" width="640" height="26" rx="8" fill="#b7cbea"/>
+  <text x="600" y="625" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" fill="#173768">Food Safety Training</text>
+</svg>

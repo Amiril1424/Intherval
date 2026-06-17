@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Dummy foto Thermal Process Consulting</title>
+  <desc id="desc">Placeholder foto dokumentasi konsultasi proses termal.</desc>
+  <rect width="1200" height="800" fill="#f7fafc"/>
+  <path d="M0 0h1200v260H0z" fill="#173768"/>
+  <rect x="90" y="150" width="1020" height="560" rx="24" fill="#ffffff"/>
+  <rect x="150" y="220" width="360" height="300" rx="16" fill="#eef5ff"/>
+  <rect x="560" y="230" width="440" height="36" rx="8" fill="#2378d0"/>
+  <rect x="560" y="306" width="500" height="26" rx="8" fill="#b7cbea"/>
+  <rect x="560" y="358" width="420" height="26" rx="8" fill="#b7cbea"/>
+  <rect x="560" y="410" width="470" height="26" rx="8" fill="#b7cbea"/>
+  <text x="600" y="620" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" fill="#173768">Thermal Process Consulting</text>
+</svg>

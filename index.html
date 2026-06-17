@@ -1,194 +1,488 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="A web application of Intherval System" />
-    <meta name="keywords" content="HTML, CSS, JavaScript" />
-    <meta name="author" content="Amiril Mukminin" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InTherVal System</title>
-    <meta name="description" content="Uji validasi proses termal" />
+    <meta name="author" content="Amiril Mukminin">
+    <meta name="description"
+        content="CV. InTherVal Sistem menyediakan Thermal Process Validation, Food Safety Training, dan Technical Consultation untuk industri pangan.">
     <meta name="keywords"
-        content="Pest Control Training, Validasi F0, Uji kecukupan panas, sterilisasi, pasteurisasi, GMP, Thermal Process, Training Pest Control Industri Makanan, Intherval System, HACCP, Food Safety" />
-
-
+        content="CV Intherval Sistem, Thermal Process Validation, Food Safety Solutions, Validasi F0, Validasi P0, Cook Value, HACCP, GHP">
+    <meta name="theme-color" content="#16376d">
+    <title>CV. InTherVal Sistem | Thermal Process Validation & Food Safety Solutions</title>
+    <link rel="preload" href="./_Assets/BPOM-optimized.jpg" as="image">
+    <link rel="stylesheet" href="style.css">
     <script type="application/ld+json">
         {
-          "@context": "https://schema.org",
-          "@type": "Course",
-          "name": "Pest Control Training for Food Industry",
-          "description": "Pelatihan pengendalian hama untuk industri makanan. Mencakup pengendalian serangga, rodent, termite, dan manajemen IPM.",
-          "provider": {
+            "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Intherval System",
-            "url": "https://inthervalsystem.id/"
-          }
+            "name": "CV. InTherVal Sistem",
+            "url": "https://inthervalsystem.id/",
+            "email": "contact@inthervalsystem.id",
+            "telephone": "+62 812-8741-1790",
+            "address": "Villa Jasmine 3 Blok B No. 7 Suko, Sidoarjo, Jawa Timur",
+            "description": "Thermal Process Validation & Food Safety Solutions untuk industri pangan."
         }
     </script>
-    <link rel="stylesheet" href="style.css">
-    <!-- Google Link for icon hamburger -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Link for icon footer -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <nav>
-        <ul class="nav-bar">
-            <li class="logo"><a href="./index.html"><img src="./_Assets/Intherval.jpg" alt="logo"></a></li>
-            <input type="checkbox" id="check">
-            <span class="menu-bar">
-                <li><a href="./index.html"><strong>Home</strong></a></li>
-                <li><a href="./service.html"><strong>Services</strong></a></li>
-                <li><a href="./certificate.html"><strong>Certificate</strong></a></li>
-                <li><a href="#sect-2"><strong>Galery</strong></a></li>
-                <li><a href="#contact-us"><strong>Contact Us</strong></a></li>
-                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
-            </span>
-            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
-        </ul>
-    </nav>
-    <!-- Slide show image -->
-    <header>
-        <div class="slideshow-container">
+    <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
 
-            <div class="mySlides fade">
-                <div class="numbertext">1 / 3</div>
-                <img src="./_Assets/kemenperin.jpg" style="width:100%">
-                <div class="text">Caption Text</div>
-            </div>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navigasi utama">
+            <a class="brand" href="./index.html" aria-label="CV. InTherVal Sistem">
+                <img src="./_Assets/Intherval.jpg" alt="Logo InTherVal System" width="64" height="64">
+                <span>CV. InTherVal Sistem</span>
+            </a>
 
-            <div class="mySlides fade">
-                <div class="numbertext">2 / 3</div>
-                <img src="./_Assets/BPOM.jpg" style="width:100%">
-                <div class="text">Caption Two</div>
-            </div>
+            <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Buka menu">
+            <label class="nav-button" for="nav-toggle" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
 
-            <div class="mySlides fade">
-                <div class="numbertext">3 / 3</div>
-                <img src="./_Assets/pringsewu.jpg" style="width:100%">
-                <div class="text">Caption Three</div>
-            </div>
+            <ul class="nav-links">
+                <li><a href="./index.html" aria-current="page">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#documentation">Documentation</a></li>
+                <li><a href="./insight.html">Insight</a></li>
+                <li><a href="./certificate.html">Certificate</a></li>
+                <li><a href="#contact-us">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-
-        </div>
-        <br>
-
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-        <!--  -->
-        <!-- <div class="header-text">
-            <h1>Set-Up Consulting Present</h1><br>
-            <h3><em>"Grow Up Together"</em></h3>
-        </div>
-    </header> -->
-
-
-        <!-- Content -->
-        <main>
-            <section id="sect-1">
-                <!-- section 1 Expertise and Program (Section 1)-->
-                <div class="container">
-                    <div id="one">
-                        <img src="./_Assets/expertise1.png" alt="expertise">
-                        <h1>Expertise</h1>
-                        <p>InTherval System adalah perusahaan yang bergerak dibidang jasa pengujian kecukupan panas
-                            termal untuk berbagai jenis produk pangan. </p>
-                    </div>
-                    <div id="two">
-                        <img src="./_Assets/program1.png" alt="Program">
-                        <h1>Services</h1>
-                        <p>Produk layanan dari InTherVal System terdiri dari: Validasi F0 Sterilisasi Komersial,
-                            Validasi Nilai P Proses Pasteurisasi, Pelatihan Proses Termal, dan Konsultan Proses Termal
-                            Industri Pangan Olahan </p>
-                    </div>
-                    <div id="three">
-                        <img src="./_Assets/Food-safety2.jpg" alt="food safety">
-                        <h1>Food Safety Compliance</h1>
-                        <p>Berdasarkan PERBPOM No. 27 Tahun 2021 Tentang Persyaratan Pangan Olahan Berasam Rendah
-                            Dikemas Hermetis, Sterilisasi komersial yang menggunakan proses panas sebagaimana dimaksud
-                            dalam Pasal 4 harus memberikan kecukupan proses setara dengan nilai F0 sekurang-kurangnya
-                            3,0 (tiga koma nol) menit dihitung terhadap spora Clostridium botulinum dan dibuktikan
-                            dengan <strong>VALIDASI KECUKUPAN PROSES PANAS</strong> </p>
-                    </div>
-                    <div id="four">
-                        <img src="./_Assets/benefit.jpg" alt="Benefit Training">
-                        <h1>Why We Are Best</h1>
-                        <!-- <p> -->
-                        <ol>
-                            <li>Hasil uji F0 ditampilkan secara <strong>Realtime</strong>
-                            </li>
-                            <li>Nilai F0 diperoleh langsung saat pengujian</li>
-                            <li>Membantu menentukan suhu dan waktu sterilisasi serta pasteurisasi yang tepat dan
-                                akurat</li>
-                            <li>Harga kompetitif</li>
-                            <li>Sangat cocok untuk pengembangan produk baru dan revalidasi proses termal</li>
-                            <li>Hasil uji yang akurat dan peralatan terkalibrasi</li>
-                            <li>Inspektor dan Trainer kompeten dan berpengalaman</li>
-                        </ol>
-                        <!-- </p> -->
-                    </div>
-                </div>
-            </section>
-            <!-- Whatsapp link -->
-            <section>
-                <div class="wa-float">
-                    <a href="https://wa.me/6281287411790"><img src="./_Assets/WhatsApp.png" alt="Whatsapp"></a>
-                </div>
-            </section>
-        </main>
-
-        <!-- adreess -->
-        <footer class="footer" id="contact-us">
-            <div class="footer-left">
-                <div class="sc">
-                    <img src="./_Assets/Intherval.jpg" alt="Logo IS">
-                </div>
-                <p class="footer-copyright">copyright: InTherVal System</p>
-            </div>
-
-            <div class="footer-center">
-                <div>
-                    <i class="fa fa-map-marker"></i>
-                    <p><span>Indonesia</span> Sidoarjo, Jawa Timur</p>
-                </div>
-                <div>
-                    <i class="fa fa-phone"></i>
-                    <p>+62 812 8741 1790</p>
-                </div>
-                <div>
-                    <i class="fa fa-envelope"></i>
-                    <p><a href="#">inthervalsystem@gmail.com</a></p>
-                </div>
-            </div>
-
-            <div class="footer-right">
-                <p class="footer-about">
-                    <span>About</span>
-                    This Channel about Thermal Process Validation and Training. Let's grow up together with us!
+    <main id="main-content">
+        <section class="hero company-hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow">Thermal Process Validation & Food Safety Solutions</p>
+                <h1 id="hero-title">Trusted Partner for Thermal Processing Excellence</h1>
+                <p>
+                    CV. InTherVal Sistem membantu industri pangan menghasilkan produk yang aman, berkualitas, dan
+                    memenuhi standar keamanan pangan melalui pendekatan ilmiah dan berbasis data.
                 </p>
-
-                <div class="footer-media">
-                    <a href="https://www.youtube.com/watch?v=rZX3GdoNWEw"><i class="fa fa-youtube"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/intherval_system?igsh=MWpxdTQ1NWttazZrOA=="><i
-                            class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                <div class="hero-pills" aria-label="Layanan utama">
+                    <a href="#services">Thermal Process Validation</a>
+                    <a href="#services">Thermal Process Consulting</a>
+                    <a href="#services">Food Safety Training</a>
+                </div>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#services">Lihat Layanan</a>
+                    <a class="button button-secondary" href="https://wa.me/6281287411790" target="_blank"
+                        rel="noopener">Hubungi Kami</a>
                 </div>
             </div>
 
-        </footer>
+            <div class="company-cover hero-slider" aria-label="Dokumentasi proyek CV. InTherVal Sistem">
+                <figure class="slide is-active">
+                    <img src="./_Assets/BPOM-optimized.jpg" alt="Dokumentasi proyek bersama BPOM" width="1200"
+                        height="800" fetchpriority="high">
+                </figure>
+                <figure class="slide">
+                    <img src="./_Assets/kemenperin-optimized.jpg" alt="Dokumentasi proyek bersama Kemenperin"
+                        width="1200" height="800" loading="lazy">
+                </figure>
+                <figure class="slide">
+                    <img src="./_Assets/pringsewu-optimized.jpg" alt="Dokumentasi proyek bersama Pringsewu"
+                        width="1200" height="800" loading="lazy">
+                </figure>
+                <div class="slider-dots" aria-label="Pilih slide dokumentasi">
+                    <button class="dot is-active" type="button" aria-label="Tampilkan dokumentasi BPOM"></button>
+                    <button class="dot" type="button" aria-label="Tampilkan dokumentasi Kemenperin"></button>
+                    <button class="dot" type="button" aria-label="Tampilkan dokumentasi Pringsewu"></button>
+                </div>
+            </div>
+        </section>
 
-        <!-- script JS -->
-        <script src="index.js"></script>
+        <section class="stats-strip" aria-label="Keunggulan InTherVal System">
+            <div>
+                <strong>Real-time</strong>
+                <span>Hasil pengujian ditampilkan saat proses berlangsung.</span>
+            </div>
+            <div>
+                <strong>Data Akurat</strong>
+                <span>Nilai F0 dan pasteurization value langsung diperoleh saat pengujian.</span>
+            </div>
+            <div>
+                <strong>Terkalibrasi</strong>
+                <span>Peralatan terkalibrasi, tertelusur, dan siap mendukung audit.</span>
+            </div>
+            <div>
+                <strong>Berpengalaman</strong>
+                <span>Tim validator dan trainer berpengalaman di industri pangan.</span>
+            </div>
+        </section>
+
+        <section class="section profile-section" id="about" aria-labelledby="about-title">
+            <div class="section-heading">
+                <p class="eyebrow">About Us</p>
+                <h2 id="about-title">CV. InTherVal Sistem</h2>
+            </div>
+            <div class="profile-layout">
+                <div class="profile-copy">
+                    <p><strong>CV. InTherVal Sistem</strong> didirikan dengan komitmen untuk membantu industri pangan
+                        menghasilkan produk yang aman, berkualitas, dan memenuhi standar keamanan pangan melalui
+                        pendekatan ilmiah dan berbasis data.</p>
+                    <p>Sebagai mitra industri, kami menyediakan layanan <strong>Thermal Process Validation</strong>,
+                        <strong>Food Safety Training</strong>, serta <strong>Technical Consultation</strong> yang
+                        dirancang untuk membantu perusahaan dalam mengembangkan, mengevaluasi, dan mengoptimalkan proses
+                        termal secara efektif dan terukur.</p>
+                    <p>Dengan pengalaman dalam berbagai aplikasi proses sterilisasi, pasteurisasi, dan pemasakan
+                        (cook value) pada produk pangan, CV. InTherVal Sistem terus berupaya menjadi mitra terpercaya
+                        bagi industri dalam menciptakan proses produksi yang aman, efisien, dan sesuai dengan
+                        perkembangan standar nasional maupun internasional.</p>
+                </div>
+                <aside class="profile-card">
+                    <p class="eyebrow">Company</p>
+                    <h3>CV. InTherVal Sistem</h3>
+                    <p>Thermal Process Validation & Food Safety Solutions.</p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section section-muted" aria-labelledby="vision-title">
+            <div class="two-column-section">
+                <div>
+                    <p class="eyebrow">Visi</p>
+                    <h2 id="vision-title">Menjadi perusahaan terdepan dan terpercaya.</h2>
+                    <p>Menjadi perusahaan terdepan dan terpercaya dalam bidang validasi proses termal, pendampingan
+                        proses termal, dan <em>food safety training</em>, yang berkontribusi nyata dalam menciptakan
+                        produk pangan yang aman, berkualitas, dan kompetitif di tingkat global.</p>
+                </div>
+                <div>
+                    <p class="eyebrow">Misi</p>
+                    <div class="mission-list">
+                        <article>
+                            <strong>Memberikan Layanan Profesional</strong>
+                            <span>Menyediakan layanan validasi proses termal, konsultasi, dan pelatihan dengan standar
+                                tinggi dan berbasis data ilmiah yang akurat.</span>
+                        </article>
+                        <article>
+                            <strong>Meningkatkan Kompetensi Industri</strong>
+                            <span>Membantu perusahaan meningkatkan pengetahuan dan kompetensi sumber daya manusia dalam
+                                bidang keamanan pangan dan proses termal.</span>
+                        </article>
+                        <article>
+                            <strong>Memberikan Solusi Praktis</strong>
+                            <span>Memberikan solusi aplikatif dan efektif untuk meningkatkan efisiensi, kualitas, dan
+                                keamanan proses produksi pangan.</span>
+                        </article>
+                        <article>
+                            <strong>Membangun Kepercayaan</strong>
+                            <span>Menjadi mitra yang dapat dipercaya dengan menjunjung tinggi integritas, transparansi,
+                                dan komitmen terhadap kepuasan pelanggan.</span>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="values-title">
+            <div class="section-heading">
+                <p class="eyebrow">Nilai Kami</p>
+                <h2 id="values-title">Prinsip kerja dalam setiap layanan.</h2>
+            </div>
+            <div class="value-grid">
+                <article>
+                    <h3>Integritas</h3>
+                    <p>Bertindak jujur, profesional, dan bertanggung jawab dalam setiap layanan yang kami berikan.</p>
+                </article>
+                <article>
+                    <h3>Kolaborasi</h3>
+                    <p>Bekerja bersama klien sebagai mitra untuk mencapai tujuan bersama.</p>
+                </article>
+                <article>
+                    <h3>Kompetensi & Inovasi</h3>
+                    <p>Terus belajar dan mengembangkan diri untuk memberikan hasil terbaik.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section-muted" id="services" aria-labelledby="services-title">
+            <div class="section-heading">
+                <p class="eyebrow">Our Services</p>
+                <h2 id="services-title">Layanan terintegrasi untuk proses termal dan keamanan pangan.</h2>
+                <p>Kami menyediakan layanan terintegrasi untuk memastikan proses termal dan sistem keamanan pangan Anda
+                    berjalan optimal, aman, dan sesuai standar mutu yang ditetapkan.</p>
+            </div>
+            <div class="service-columns">
+                <article>
+                    <span class="service-number">1</span>
+                    <h3>Thermal Process Validation</h3>
+                    <ul>
+                        <li><strong>Validasi F0 Sterilisasi Komersial</strong> - validasi nilai F0 untuk memastikan
+                            proses sterilisasi komersial mencapai tingkat keamanan yang disyaratkan.</li>
+                        <li><strong>Validasi P0 Proses Pasteurisasi</strong> - validasi nilai P0 untuk menjamin proses
+                            pasteurisasi efektif menonaktifkan mikroorganisme patogen.</li>
+                        <li><strong>Validasi Cook Value</strong> - validasi nilai cook value untuk menjamin proses
+                            pemasakan efektif menonaktifkan mikroorganisme patogen.</li>
+                    </ul>
+                </article>
+                <article>
+                    <span class="service-number">2</span>
+                    <h3>Thermal Process Consulting</h3>
+                    <ul>
+                        <li><strong>Retort Optimization</strong> - optimasi proses retort untuk mencapai efisiensi,
+                            konsistensi, dan keamanan produk.</li>
+                        <li><strong>Process Improvement</strong> - identifikasi peluang perbaikan untuk meningkatkan
+                            performa proses termal Anda.</li>
+                        <li><strong>Thermal Process Troubleshooting</strong> - analisis dan solusi masalah proses
+                            termal secara menyeluruh dan tepat sasaran.</li>
+                        <li><strong>Product Development Support</strong> - dukungan teknis dalam pengembangan produk
+                            baru berbasis proses termal.</li>
+                    </ul>
+                </article>
+                <article>
+                    <span class="service-number">3</span>
+                    <h3>Food Safety Training</h3>
+                    <ul>
+                        <li><strong>Thermal Process Training</strong> - pelatihan komprehensif mengenai prinsip
+                            validasi, pengoperasian retort, dan thermal authority.</li>
+                        <li><strong>GHP and HACCP Competency Training</strong> - pelatihan untuk meningkatkan
+                            kompetensi dalam penerapan GHP dan Sistem HACCP.</li>
+                        <li><strong>Quality Management System Training</strong> - pelatihan sistem manajemen mutu
+                            keamanan pangan seperti BRC, ISO 22000, FSSC 22000, dan standar lain.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="why-title">
+            <div class="section-heading">
+                <p class="eyebrow">Why Choose Us</p>
+                <h2 id="why-title">Keunggulan layanan CV. InTherVal Sistem.</h2>
+            </div>
+            <ol class="why-list">
+                <li>Hasil pengujian ditampilkan secara <strong>real-time</strong>.</li>
+                <li>Nilai F0 dan pasteurization value langsung diperoleh saat pengujian.</li>
+                <li>Perhitungan beberapa target mikroba sekaligus.</li>
+                <li>Analisis cook value untuk menjaga mutu produk.</li>
+                <li>Menentukan suhu dan waktu proses yang optimal.</li>
+                <li>Identifikasi cold spot dan worst-case condition.</li>
+                <li>Peralatan terkalibrasi dan tertelusur.</li>
+                <li>Mendukung audit, HACCP, dan persyaratan regulator.</li>
+                <li>Cocok untuk pengembangan produk baru dan revalidasi.</li>
+                <li>Tim validator dan trainer berpengalaman di industri pangan.</li>
+            </ol>
+        </section>
+
+        <section class="section section-muted" id="documentation" aria-labelledby="documentation-title">
+            <div class="section-heading">
+                <p class="eyebrow">Project Experience & Documentation</p>
+                <h2 id="documentation-title">Dokumentasi proyek, partner, dan klien.</h2>
+                <p>Telah menangani berbagai proyek validasi dan pendampingan proses termal untuk berbagai jenis produk
+                    dan industri.</p>
+            </div>
+            <div class="documentation-carousel" aria-label="Galeri dokumentasi proyek">
+                <div class="carousel-actions">
+                    <button class="carousel-button carousel-prev" type="button" aria-label="Lihat dokumentasi sebelumnya">
+                        <span aria-hidden="true">‹</span>
+                    </button>
+                    <button class="carousel-button carousel-next" type="button" aria-label="Lihat dokumentasi berikutnya">
+                        <span aria-hidden="true">›</span>
+                    </button>
+                </div>
+                <div class="documentation-viewport">
+                    <div class="documentation-track">
+                        <figure class="documentation-card">
+                            <img src="./_Assets/project_documentation/gambar_cook_value.png"
+                                alt="Dokumentasi pengujian cook value" width="1355" height="768" loading="lazy">
+                        </figure>
+                        <figure class="documentation-card">
+                            <img src="./_Assets/project_documentation/gambar_validasi_F0.png"
+                                alt="Dokumentasi validasi F0 sterilisasi" width="1392" height="768" loading="lazy">
+                        </figure>
+                        <figure class="documentation-card">
+                            <img src="./_Assets/project_documentation/gambar_food_safety_training.jpeg"
+                                alt="Dokumentasi food safety training" width="1280" height="853" loading="lazy">
+                        </figure>
+                        <figure class="documentation-card">
+                            <img src="./_Assets/project_documentation/gambar_thermal_consulting.jpeg"
+                                alt="Dokumentasi thermal process consulting" width="1600" height="900" loading="lazy">
+                        </figure>
+                        <figure class="documentation-card">
+                            <img src="./_Assets/project_documentation/gambar_monitoring_validasi_fo.png"
+                                alt="Dokumentasi monitoring validasi F0" width="1372" height="768" loading="lazy">
+                        </figure>
+                        <figure class="documentation-card">
+                            <img src="./_Assets/project_documentation/gambar_validasi 3.JPG"
+                                alt="Dokumentasi kegiatan validasi proses termal" width="1194" height="660"
+                                loading="lazy">
+                        </figure>
+                        <figure class="documentation-card">
+                            <img src="./_Assets/project_documentation/gambar_pasteurisasi.jfif"
+                                alt="Dokumentasi validasi proses pasteurisasi" width="1600" height="1200"
+                                loading="lazy">
+                        </figure>
+                        <figure class="documentation-card">
+                            <img src="./_Assets/project_documentation/HACCP_training1.jpeg"
+                                alt="Dokumentasi pelatihan HACCP sesi pertama" width="1280" height="960"
+                                loading="lazy">
+                        </figure>
+                        <figure class="documentation-card">
+                            <img src="./_Assets/project_documentation/HACCP_training2.jpeg"
+                                alt="Dokumentasi pelatihan HACCP sesi kedua" width="1280" height="960" loading="lazy">
+                        </figure>
+                        <figure class="documentation-card">
+                            <img src="./_Assets/project_documentation/Audit_internaltraining1.jpeg"
+                                alt="Dokumentasi pelatihan audit internal keamanan pangan sesi pertama" width="1600"
+                                height="1200" loading="lazy">
+                        </figure>
+                        <figure class="documentation-card">
+                            <img src="./_Assets/project_documentation/Audit_internaltraining2.jpeg"
+                                alt="Dokumentasi pelatihan audit internal keamanan pangan sesi kedua" width="1600"
+                                height="1200" loading="lazy">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-section" aria-labelledby="testimonial-title">
+                <div class="section-heading">
+                    <p class="eyebrow">Testimoni</p>
+                    <h2 id="testimonial-title">Testimoni Uji Validasi Intherval System</h2>
+                </div>
+                <div class="documentation-carousel testimonial-carousel" aria-label="Video testimoni InTherVal System">
+                    <div class="carousel-actions">
+                        <button class="carousel-button carousel-prev" type="button"
+                            aria-label="Lihat testimoni sebelumnya">
+                            <span aria-hidden="true">‹</span>
+                        </button>
+                        <button class="carousel-button carousel-next" type="button"
+                            aria-label="Lihat testimoni berikutnya">
+                            <span aria-hidden="true">›</span>
+                        </button>
+                    </div>
+                    <div class="documentation-viewport">
+                        <div class="documentation-track">
+                            <figure class="documentation-card testimonial-card">
+                                <video controls preload="metadata" playsinline>
+                                    <source src="./_Assets/_testimoni/Testimoni1.mp4" type="video/mp4">
+                                    Browser Anda tidak mendukung pemutar video.
+                                </video>
+                            </figure>
+                            <figure class="documentation-card testimonial-card testimonial-card-portrait">
+                                <div class="portrait-video-canvas">
+                                    <video controls preload="metadata" playsinline>
+                                        <source src="./_Assets/_testimoni/Testimoni2.mp4" type="video/mp4">
+                                        Browser Anda tidak mendukung pemutar video.
+                                    </video>
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-muted" aria-labelledby="contact-title">
+            <div class="cta-panel">
+                <div>
+                    <p class="eyebrow">Get In Touch</p>
+                    <h2 id="contact-title">Kami siap menjadi mitra terpercaya perusahaan Anda.</h2>
+                    <p>Kami membantu memastikan proses termal yang aman, efektif, dan sesuai standar.</p>
+                </div>
+                <a class="button cta-button" href="https://wa.me/6281287411790" target="_blank" rel="noopener">
+                    <img src="./_Assets/WhatsApp.png" alt="" aria-hidden="true" width="22" height="22">
+                    <span>Konsultasi via WhatsApp</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <a class="wa-float" href="https://wa.me/6281287411790" target="_blank" rel="noopener"
+        aria-label="Hubungi CV. InTherVal Sistem via WhatsApp">
+        <img src="./_Assets/WhatsApp.png" alt="" aria-hidden="true" width="36" height="36">
+    </a>
+    <a class="map-float" href="https://maps.app.goo.gl/RR2NxvEKXqkn8sMV7" target="_blank" rel="noopener"
+        aria-label="Lihat lokasi CV. InTherVal Sistem di Google Maps">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 21s7-5.2 7-12a7 7 0 0 0-14 0c0 6.8 7 12 7 12z"></path>
+            <circle cx="12" cy="9" r="2.5"></circle>
+        </svg>
+    </a>
+
+    <footer class="footer" id="contact-us">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a class="footer-logo" href="./index.html" aria-label="CV. InTherVal Sistem">
+                    <img src="./_Assets/Intherval.jpg" alt="Logo CV. InTherVal Sistem" width="64" height="64"
+                        loading="lazy">
+                    <strong>CV. InTherVal Sistem</strong>
+                </a>
+                <p>Thermal Process Validation & Food Safety Solutions untuk membantu industri pangan menghasilkan
+                    produk yang aman, berkualitas, dan sesuai standar.</p>
+                <div class="social-links" aria-label="Media sosial InTherVal System">
+                    <a class="social-icon" href="mailto:contact@inthervalsystem.id" aria-label="Email InTherVal System">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 6h16v12H4z"></path>
+                            <path d="m4 7 8 6 8-6"></path>
+                        </svg>
+                    </a>
+                    <a class="social-icon" href="https://www.instagram.com/intherval_system" target="_blank"
+                        rel="noopener" aria-label="Instagram InTherVal System">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <circle cx="17.5" cy="6.5" r="1.2"></circle>
+                        </svg>
+                    </a>
+                    <a class="social-icon" href="https://www.youtube.com/watch?v=rZX3GdoNWEw" target="_blank"
+                        rel="noopener" aria-label="YouTube InTherVal System">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="3" y="6" width="18" height="12" rx="4"></rect>
+                            <path d="M10 9.5v5l5-2.5z"></path>
+                        </svg>
+                    </a>
+                    <a class="social-icon" href="https://maps.app.goo.gl/RR2NxvEKXqkn8sMV7" target="_blank"
+                        rel="noopener" aria-label="Google Maps CV. InTherVal Sistem">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 21s7-5.2 7-12a7 7 0 0 0-14 0c0 6.8 7 12 7 12z"></path>
+                            <circle cx="12" cy="9" r="2.5"></circle>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <nav class="footer-column" aria-label="Perusahaan">
+                <strong>Perusahaan</strong>
+                <a href="./index.html#about">Tentang Kami</a>
+                <a href="./index.html#services">Layanan</a>
+                <a href="./index.html#documentation">Dokumentasi Project</a>
+                <a href="./insight.html">Insight</a>
+                <a href="./certificate.html">Certificate</a>
+                <a href="#contact-us">Hubungi Kami</a>
+            </nav>
+            <nav class="footer-column" aria-label="Layanan kami">
+                <strong>Layanan Kami</strong>
+                <a href="./service.html">Thermal Process Validation</a>
+                <a href="./service.html">Thermal Process Consulting</a>
+                <a href="./service.html">Food Safety Training</a>
+                <a href="./certificate.html">Certificate Verification</a>
+            </nav>
+            <address class="footer-column">
+                <strong>Informasi</strong>
+                <a href="https://www.inthervalsystem.id" target="_blank" rel="noopener">www.inthervalsystem.id</a>
+                <a href="mailto:contact@inthervalsystem.id">contact@inthervalsystem.id</a>
+                <a href="tel:+6281287411790">+62 812-8741-1790</a>
+                <a href="tel:+6281330892314">+62 813-3089-2314</a>
+                <a href="https://maps.app.goo.gl/RR2NxvEKXqkn8sMV7" target="_blank" rel="noopener">Villa Jasmine 3 Blok
+                    B No. 7 Suko, Sidoarjo</a>
+            </address>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 CV. InTherVal Sistem. All rights reserved.</span>
+            <div class="social-links">
+                <a href="https://wa.me/6281287411790" target="_blank" rel="noopener">Support</a>
+                <a href="./certificate.html">Certificate</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js" defer></script>
 </body>
 
 </html>

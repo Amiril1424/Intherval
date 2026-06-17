@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Amiril Mukminin">
+    <meta name="description" content="Insight, artikel, dan edukasi dari CV. InTherVal Sistem.">
+    <meta name="theme-color" content="#16376d">
+    <title>Insight | CV. InTherVal Sistem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navigasi utama">
+            <a class="brand" href="./index.html" aria-label="CV. InTherVal Sistem">
+                <img src="./_Assets/Intherval.jpg" alt="Logo InTherVal System" width="64" height="64">
+                <span>CV. InTherVal Sistem</span>
+            </a>
+            <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Buka menu">
+            <label class="nav-button" for="nav-toggle" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index.html#about">About</a></li>
+                <li><a href="./service.html">Services</a></li>
+                <li><a href="./index.html#documentation">Documentation</a></li>
+                <li><a href="./insight.html" aria-current="page">Insight</a></li>
+                <li><a href="./certificate.html">Certificate</a></li>
+                <li><a href="#contact-us">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="page-hero insight-hero">
+            <p class="eyebrow">Insight</p>
+            <h1>Trending</h1>
+            <p>Kumpulan artikel dari CV. InTherVal Sistem seputar validasi proses termal, keamanan pangan, dan
+                peningkatan kompetensi industri pangan.</p>
+        </section>
+
+        <section class="insight-layout" aria-label="Artikel insight">
+            <div class="insight-trending" data-insight-list></div>
+        </section>
+    </main>
+
+    <a class="wa-float" href="https://wa.me/6281287411790" target="_blank" rel="noopener"
+        aria-label="Hubungi CV. InTherVal Sistem via WhatsApp">
+        <img src="./_Assets/WhatsApp.png" alt="" aria-hidden="true" width="36" height="36">
+    </a>
+    <a class="map-float" href="https://maps.app.goo.gl/RR2NxvEKXqkn8sMV7" target="_blank" rel="noopener"
+        aria-label="Lihat lokasi CV. InTherVal Sistem di Google Maps">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 21s7-5.2 7-12a7 7 0 0 0-14 0c0 6.8 7 12 7 12z"></path>
+            <circle cx="12" cy="9" r="2.5"></circle>
+        </svg>
+    </a>
+
+    <footer class="footer" id="contact-us">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a class="footer-logo" href="./index.html" aria-label="CV. InTherVal Sistem">
+                    <img src="./_Assets/Intherval.jpg" alt="Logo CV. InTherVal Sistem" width="64" height="64"
+                        loading="lazy">
+                    <strong>CV. InTherVal Sistem</strong>
+                </a>
+                <p>Thermal Process Validation & Food Safety Solutions untuk membantu industri pangan menghasilkan
+                    produk yang aman, berkualitas, dan sesuai standar.</p>
+            </div>
+            <nav class="footer-column" aria-label="Perusahaan">
+                <strong>Perusahaan</strong>
+                <a href="./index.html#about">Tentang Kami</a>
+                <a href="./index.html#services">Layanan</a>
+                <a href="./index.html#documentation">Dokumentasi Project</a>
+                <a href="./insight.html">Insight</a>
+                <a href="./certificate.html">Certificate</a>
+            </nav>
+            <nav class="footer-column" aria-label="Layanan kami">
+                <strong>Layanan Kami</strong>
+                <a href="./service.html">Thermal Process Validation</a>
+                <a href="./service.html">Thermal Process Consulting</a>
+                <a href="./service.html">Food Safety Training</a>
+                <a href="./certificate.html">Certificate Verification</a>
+            </nav>
+            <address class="footer-column">
+                <strong>Informasi</strong>
+                <a href="https://www.inthervalsystem.id" target="_blank" rel="noopener">www.inthervalsystem.id</a>
+                <a href="mailto:contact@inthervalsystem.id">contact@inthervalsystem.id</a>
+                <a href="tel:+6281287411790">+62 812-8741-1790</a>
+                <a href="https://maps.app.goo.gl/RR2NxvEKXqkn8sMV7" target="_blank" rel="noopener">Villa Jasmine 3 Blok
+                    B No. 7 Suko, Sidoarjo</a>
+            </address>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 CV. InTherVal Sistem. All rights reserved.</span>
+            <div class="social-links">
+                <a href="https://wa.me/6281287411790" target="_blank" rel="noopener">Support</a>
+                <a href="./certificate.html">Certificate</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="articles-data.js"></script>
+    <script src="insight.js"></script>
+</body>
+
+</html>

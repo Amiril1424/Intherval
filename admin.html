@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Super Admin Insight | InTherVal System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="admin-page">
+    <main class="admin-shell">
+        <section class="admin-login" data-admin-login>
+            <p class="eyebrow">Super Admin</p>
+            <h1>Kelola Artikel Insight</h1>
+            <p>Masukkan passcode admin untuk membuka editor artikel.</p>
+            <input type="password" id="adminPasscode" placeholder="Passcode admin" autocomplete="current-password">
+            <button class="button button-primary" type="button" id="loginAdmin">Masuk Admin</button>
+            <p class="admin-note">Passcode awal: <strong>intherval-admin-2026</strong></p>
+        </section>
+
+        <section class="admin-dashboard hidden" data-admin-dashboard>
+            <div class="admin-header">
+                <div>
+                    <p class="eyebrow">Super Admin</p>
+                    <h1>Artikel Insight</h1>
+                </div>
+                <div class="admin-actions">
+                    <a class="button button-secondary" href="./insight.html" target="_blank" rel="noopener">Lihat Insight</a>
+                    <button class="button button-secondary" type="button" id="exportArticles">Export JSON</button>
+                    <label class="button button-secondary" for="importArticles">Import JSON</label>
+                    <input class="hidden" type="file" id="importArticles" accept="application/json">
+                </div>
+            </div>
+
+            <form class="admin-form" id="articleForm">
+                <input type="hidden" id="articleId">
+                <label>
+                    Judul Artikel
+                    <input type="text" id="articleTitle" required placeholder="Contoh: Validasi F0 pada Produk Kaleng">
+                </label>
+                <label>
+                    Penulis
+                    <input type="text" id="articleAuthor" required placeholder="Contoh: Iin Solihin">
+                </label>
+                <label>
+                    Kategori
+                    <input type="text" id="articleCategory" required placeholder="Thermal Validation">
+                </label>
+                <label>
+                    Tanggal Publikasi
+                    <input type="date" id="articleDate" required>
+                </label>
+                <label>
+                    Ringkasan
+                    <textarea id="articleExcerpt" rows="3" required placeholder="Ringkasan singkat artikel..."></textarea>
+                </label>
+                <label>
+                    Isi Artikel
+                    <textarea id="articleContent" rows="10" required placeholder="Tulis artikel di sini. Pisahkan paragraf dengan baris kosong."></textarea>
+                </label>
+                <div class="admin-inline-image">
+                    <label>
+                        Sisipkan Gambar di Isi Artikel
+                        <input type="file" id="inlineArticleImage" accept="image/*">
+                    </label>
+                    <input type="text" id="inlineImageCaption" placeholder="Caption/alt gambar, contoh: Gambar 1. Mekanisme PPL">
+                    <button class="button button-secondary" type="button" id="insertInlineImage">Sisipkan ke Posisi Kursor</button>
+                    <p class="admin-note">Letakkan kursor di isi artikel, pilih gambar, lalu klik tombol sisipkan. Gambar akan muncul di tengah artikel saat dipublish.</p>
+                </div>
+                <label>
+                    Upload Gambar Cover
+                    <input type="file" id="articleImage" accept="image/*">
+                </label>
+                <img class="admin-image-preview hidden" id="imagePreview" alt="Preview gambar artikel">
+                <div class="admin-actions">
+                    <button class="button button-primary" type="submit">Simpan Artikel</button>
+                    <button class="button button-secondary" type="button" id="resetForm">Reset Form</button>
+                </div>
+            </form>
+
+            <section class="admin-list" aria-labelledby="admin-list-title">
+                <h2 id="admin-list-title">Artikel Tersimpan</h2>
+                <p class="admin-note">Artikel default sudah dimasukkan ke daftar ini dan bisa diedit sesuai kebutuhan.</p>
+                <div id="adminArticleList"></div>
+            </section>
+        </section>
+    </main>
+
+    <script src="articles-data.js"></script>
+    <script src="admin.js"></script>
+</body>
+
+</html>

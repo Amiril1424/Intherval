@@ -1,490 +1,267 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="A web application of Intherval System" />
-    <meta name="keywords" content="HTML, CSS, JavaScript" />
-    <meta name="author" content="Amiril Mukminin" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Certificate of Training | Intherval System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Amiril Mukminin">
     <meta name="description"
-        content="Pest Control Training untuk industri makanan bersama Intherval System. Pelatihan kompetensi dan manajemen pengendalian hama." />
+        content="Cek dan unduh sertifikat peserta pelatihan InTherVal System berdasarkan jenis pelatihan dan tahun.">
     <meta name="keywords"
-        content="Pest Control Training, Pelatihan Pengendalian Hama, Training Pest Control Industri Makanan, Intherval System, HACCP, Food Safety" />
-
-    <script type="application/ld+json">
-            {
-              "@context": "https://schema.org",
-              "@type": "Course",
-              "name": "Pest Control Training for Food Industry",
-              "description": "Pelatihan pengendalian hama untuk industri makanan. Mencakup pengendalian serangga, rodent, termite, dan manajemen IPM.",
-              "provider": {
-                "@type": "Organization",
-                "name": "Intherval System",
-                "url": "https://inthervalsystem.id/"
-              }
-            }
-            </script>
-    <!-- Google Link for icon hamburger -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Link for icon footer -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f8fafc;
-      margin: 0;
-      padding: 20px;
-      color: #1e293b;
-    }
-
-        /* ===== Navbar container ===== */
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 9999;
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        /* ===== UL styling ===== */
-        .navbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            list-style: none;
-            padding: 10px 20px;
-            margin: 0;
-        }
-
-        /* ===== Logo ===== */
-        .navbar .logo img {
-            height: 50px;
-        }
-
-        /* ===== Menu list (desktop) ===== */
-        .navbar .menubar {
-            display: flex;
-            position: absolute;
-            right: 0px;
-            padding: 10px;
-        }
-
-        .navbar .menubar li {
-            padding-left: 10px;
-        }
-
-        .navbar .menubar li a {
-            display: inline-block;
-            color: #600ee4;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 20px;
-        }
-
-        .navbar .menubar li a:hover {
-            color: white;
-            background-color: rgb(9, 32, 160);
-        }
-
-        /* ===== Checkbox hidden ===== */
-        #check {
-            display: none;
-        }
-
-        /* ===== Hamburger menu button ===== */
-        .open-menu,
-        .close-menu {
-            position: absolute;
-            color: var(--color1);
-            cursor: pointer;
-            font-size: 1.5rem;
-            display: none;
-        }
-
-        .open-menu {
-            top: 50%;
-            right: 20px;
-            transform: translateY(-50%);
-        }
-
-        .close-menu {
-            top: 20px;
-            right: 20px;
-        }
-
-        #check {
-            display: none;
-        }
-
-        /* ===== Responsive - Mobile view ===== */
-        @media (max-width: 768px) {
-            /* .navbar {
-                flex-wrap: wrap;
-            } */
-
-            .navbar .menubar {
-                flex-direction: column;
-                background: #fff;
-                position: fixed;
-                top: 0;
-                right: -100%;
-                height: 100vh;
-                width: 250px;
-                padding: 80px 20px 20px;
-                z-index: 100;
-                transition: 0.3s ease-in-out;
-            }
-
-            .menubar li {
-                margin-top: 40px;
-            }
-
-            .menubar li a {
-                padding: 10px;
-            }
-
-            .open-menu,
-            .close-menu {
-                display: block;
-            }
-
-            #check:checked~.menubar {
-                right: 0;
-            }
-        }
-
-
-
-
-
-
-
-
-
-
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .filters {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-    }
-    select {
-      padding: 10px;
-      border-radius: 8px;
-      border: 1px solid #cbd5e1;
-      background: white;
-      min-width: 180px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-    thead {
-      background: #1e3a8a;
-      color: white;
-    }
-    th, td {
-      padding: 12px 16px;
-      border-bottom: 1px solid #e2e8f0;
-      text-align: left;
-    }
-    tr:hover {
-      background: #f1f5f9;
-    }
-    .hidden { display: none; }
-
-    /* Tombol Unduh */
-    .download-link {
-      display: inline-block;
-      padding: 6px 12px;
-      background: #2563eb;
-      color: white;
-      border-radius: 6px;
-      font-size: 14px;
-      text-decoration: none;
-      transition: background 0.2s;
-    }
-    .download-link:hover {
-      background: #1d4ed8;
-    }
-
-    /* WhatsApp floating button */
-    .wa-float {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 999;
-        cursor: pointer;
-        transition: transform 0.3s;
-    }
-
-    .wa-float:hover {
-        transform: scale(1.1);
-    }
-
-    .wa-float img {
-        width: 60px;
-        height: 60px;
-    }
-        
-    /* === Responsive Table === */
-  .table-container {
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    margin-top: 15px;
-    border-radius: 10px;
-  }
-
-  table {
-    width: 100%;
-    min-width: 700px; /* biar kolom gak sempit di mobile */
-    border-collapse: collapse;
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  }
-
-  thead {
-    background: #1e3a8a;
-    color: white;
-  }
-
-  th, td {
-    padding: 12px 16px;
-    border-bottom: 1px solid #e2e8f0;
-    text-align: left;
-    font-size: 14px;
-    white-space: nowrap; /* supaya teks gak pecah baris */
-  }
-
-  tr:hover {
-    background: #f1f5f9;
-  }
-
-  /* Responsive font & padding untuk layar kecil */
-  @media (max-width: 600px) {
-    th, td {
-      padding: 8px 10px;
-      font-size: 12px;
-    }
-    .download-link {
-      font-size: 12px;
-      padding: 4px 8px;
-    }
-  }
-
-  /* Modal */
-    .modal { 
-      display: none; 
-      position: fixed; 
-      z-index: 1000; 
-      left: 0; 
-      top: 0; 
-      width: 100%; 
-      height: 100%; 
-      background-color: rgba(0,0,0,0.5); 
-    }
-    .modal-content { 
-      background: #fff; 
-      margin: 10% auto; 
-      padding: 20px; 
-      border-radius: 10px; 
-      width: 90%; 
-      max-width: 400px; 
-      text-align: center; 
-    }
-    .modal input { 
-      width: 100%; 
-      padding: 10px; 
-      margin: 10px 0; 
-      border: 1px solid #ccc; 
-      border-radius: 6px; 
-    }
-    .modal button { 
-      padding: 10px 15px; 
-      margin: 5px; 
-      border: none; 
-      border-radius: 6px; 
-      cursor: pointer; 
-    }
-    .btn-ok { background: #2563eb; color: white; }
-    .btn-cancel { background: #e5e7eb; }
-    .btn-ok:hover { background: #1d4ed8; }
-    .btn-cancel:hover { background: #cbd5e1; }
-
-  </style>
+        content="sertifikat pelatihan Intherval System, certificate training, HACCP, pest control, CPPOB">
+    <meta name="theme-color" content="#0f766e">
+    <title>Certificate | InTherVal System</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <nav>
-        <ul class="navbar">
-            <li class="logo"><a href="./index.html"><img src="./_Assets/Intherval.jpg" alt="logo"></a></li>
-            <input type="checkbox" id="check">
-            <span class="menubar">
-                <li><a href="./index.html"><strong>Home</strong></a></li>
-                <li><a href="./service.html"><strong>Services</strong></a></li>
-                <li><a href="./certificate.html"><strong>Certificate</strong></a></li>
-                <li><a href="./index.html"><strong>Galery</strong></a></li>
-                <li><a href="#contact-us"><strong>Contact Us</strong></a></li>
-                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
-            </span>
-            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
-        </ul>
-    </nav>
+    <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
 
-  <h1>Daftar Sertifikat Peserta Pelatihan InTherVal System</h1>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navigasi utama">
+            <a class="brand" href="./index.html" aria-label="InTherVal System">
+                <img src="./_Assets/Intherval.jpg" alt="InTherVal System" width="64" height="64">
+                <span>InTherVal System</span>
+            </a>
+            <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Buka menu">
+            <label class="nav-button" for="nav-toggle" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./service.html">Services</a></li>
+                <li><a href="./insight.html">Insight</a></li>
+                <li><a href="./certificate.html" aria-current="page">Certificate</a></li>
+                <li><a href="./index.html#profile">Profile</a></li>
+                <li><a href="#contact-us">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Dropdown filter -->
-  <div class="filters">
-    <select id="pelatihan">
-      <option value="">Pilih Jenis Pelatihan</option>
-      <option value="pest">Pelatihan Pest Control</option>
-      <option value="haccp1">Pelatihan Pengelolaan HACCP</option>
-      <option value="haccp2">Pelatihan Penyusunan Dokumen HACCP</option>
-      <option value="AuditIntr">Pelatihan Audit Internal Keamanan Pangan</option>
-      <option value="cppob">Pelatihan CPPOB</option>
-      
-    </select>
-    <select id="tahun" disabled>
-      <option value="">Pilih Tahun Pelatihan</option>
-      <option value="2023">2023</option>
-      <option value="2024">2024</option>
-      <option value="2025">2025</option>
-    </select>
-  </div>
+    <main id="main-content">
+        <section class="page-hero">
+            <p class="eyebrow">Certificate</p>
+            <h1>Daftar sertifikat peserta pelatihan InTherVal System.</h1>
+            <p>Pilih jenis pelatihan dan tahun, lalu verifikasi nomor HP yang digunakan saat pendaftaran untuk membuka
+                tautan sertifikat.</p>
+        </section>
 
-  <!-- Tabel peserta -->
-  <div class="table-container">
-    <table id="tabelPeserta" class="hidden">
-    <thead>
-      <tr>
-        <th>No</th>
-        <th>Nama Peserta</th>
-        <th>Instansi</th>
-        <th>No Sertifikat</th>
-        <th>Tanggal Pelatihan</th>
-        <th>Unduh Sertifikat</th>
-      </tr>
-    </thead>
-    <tbody id="tbody"></tbody>
-  </table>
-  </div>
-  
+        <section class="certificate-layout" aria-labelledby="certificate-filter">
+            <h2 class="hidden" id="certificate-filter">Filter sertifikat</h2>
+            <div class="filters">
+                <select id="pelatihan">
+                    <option value="">Pilih Jenis Pelatihan</option>
+                    <option value="pest">Pelatihan Pest Control</option>
+                    <option value="haccp1">Pelatihan Pengelolaan HACCP</option>
+                    <option value="haccp2">Pelatihan Penyusunan Dokumen HACCP</option>
+                    <option value="AuditIntr">Pelatihan Audit Internal Keamanan Pangan</option>
+                    <option value="cppob">Pelatihan CPPOB</option>
+                </select>
+                <select id="tahun" disabled>
+                    <option value="">Pilih Tahun Pelatihan</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                </select>
+            </div>
 
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/6281410857399" class="wa-float" target="_blank">
-    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Chat" />
-  </a>
+            <div class="table-container">
+                <table id="tabelPeserta" class="hidden">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Peserta</th>
+                            <th>Instansi</th>
+                            <th>No Sertifikat</th>
+                            <th>Tanggal Pelatihan</th>
+                            <th>Unduh Sertifikat</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
 
-  <!-- Modal -->
-  <div id="phoneModal" class="modal">
-    <div class="modal-content">
-      <h3>Verifikasi Nomor HP</h3>
-      <p>Masukkan nomor HP yang digunakan saat pendaftaran pelatihan:</p>
-      <input type="text" id="phoneInput" placeholder="contoh: 081234567890" />
-      <div>
-        <button class="btn-ok" id="confirmBtn">Konfirmasi</button>
-        <button class="btn-cancel" id="cancelBtn">Batal</button>
-      </div>
+    <a class="wa-float" href="https://wa.me/6281410857399" target="_blank" rel="noopener"
+        aria-label="Hubungi InTherVal System via WhatsApp">
+        <img src="./_Assets/WhatsApp.png" alt="" aria-hidden="true" width="36" height="36">
+    </a>
+    <a class="map-float" href="https://maps.app.goo.gl/RR2NxvEKXqkn8sMV7" target="_blank" rel="noopener"
+        aria-label="Lihat lokasi CV. InTherVal Sistem di Google Maps">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 21s7-5.2 7-12a7 7 0 0 0-14 0c0 6.8 7 12 7 12z"></path>
+            <circle cx="12" cy="9" r="2.5"></circle>
+        </svg>
+    </a>
+
+    <div id="phoneModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <h2 id="modal-title">Verifikasi Nomor HP</h2>
+            <p>Masukkan nomor HP yang digunakan saat pendaftaran pelatihan.</p>
+            <input type="tel" id="phoneInput" placeholder="contoh: 081234567890" autocomplete="tel">
+            <div class="modal-actions">
+                <button class="button button-secondary" type="button" id="cancelBtn">Batal</button>
+                <button class="button button-primary" type="button" id="confirmBtn">Konfirmasi</button>
+            </div>
+        </div>
     </div>
-  </div>
 
+    <footer class="footer" id="contact-us">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a class="footer-logo" href="./index.html" aria-label="CV. InTherVal Sistem">
+                    <img src="./_Assets/Intherval.jpg" alt="Logo CV. InTherVal Sistem" width="64" height="64"
+                        loading="lazy">
+                    <strong>CV. InTherVal Sistem</strong>
+                </a>
+                <p>Thermal Process Validation & Food Safety Solutions untuk membantu industri pangan menghasilkan
+                    produk yang aman, berkualitas, dan sesuai standar.</p>
+                <div class="social-links" aria-label="Media sosial InTherVal System">
+                    <a class="social-icon" href="mailto:contact@inthervalsystem.id" aria-label="Email InTherVal System">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 6h16v12H4z"></path>
+                            <path d="m4 7 8 6 8-6"></path>
+                        </svg>
+                    </a>
+                    <a class="social-icon" href="https://www.instagram.com/intherval_system" target="_blank"
+                        rel="noopener" aria-label="Instagram InTherVal System">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <circle cx="17.5" cy="6.5" r="1.2"></circle>
+                        </svg>
+                    </a>
+                    <a class="social-icon" href="https://www.youtube.com/watch?v=rZX3GdoNWEw" target="_blank"
+                        rel="noopener" aria-label="YouTube InTherVal System">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="3" y="6" width="18" height="12" rx="4"></rect>
+                            <path d="M10 9.5v5l5-2.5z"></path>
+                        </svg>
+                    </a>
+                    <a class="social-icon" href="https://maps.app.goo.gl/RR2NxvEKXqkn8sMV7" target="_blank"
+                        rel="noopener" aria-label="Google Maps CV. InTherVal Sistem">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 21s7-5.2 7-12a7 7 0 0 0-14 0c0 6.8 7 12 7 12z"></path>
+                            <circle cx="12" cy="9" r="2.5"></circle>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <nav class="footer-column" aria-label="Perusahaan">
+                <strong>Perusahaan</strong>
+                <a href="./index.html#about">Tentang Kami</a>
+                <a href="./index.html#services">Layanan</a>
+                <a href="./index.html#documentation">Dokumentasi Project</a>
+                <a href="./insight.html">Insight</a>
+                <a href="./certificate.html">Certificate</a>
+                <a href="#contact-us">Hubungi Kami</a>
+            </nav>
+            <nav class="footer-column" aria-label="Layanan kami">
+                <strong>Layanan Kami</strong>
+                <a href="./service.html">Thermal Process Validation</a>
+                <a href="./service.html">Thermal Process Consulting</a>
+                <a href="./service.html">Food Safety Training</a>
+                <a href="./certificate.html">Certificate Verification</a>
+            </nav>
+            <address class="footer-column">
+                <strong>Informasi</strong>
+                <a href="https://www.inthervalsystem.id" target="_blank" rel="noopener">www.inthervalsystem.id</a>
+                <a href="mailto:contact@inthervalsystem.id">contact@inthervalsystem.id</a>
+                <a href="tel:+6281287411790">+62 812-8741-1790</a>
+                <a href="tel:+6281330892314">+62 813-3089-2314</a>
+                <a href="https://maps.app.goo.gl/RR2NxvEKXqkn8sMV7" target="_blank" rel="noopener">Villa Jasmine 3 Blok
+                    B No. 7 Suko, Sidoarjo</a>
+            </address>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 CV. InTherVal Sistem. All rights reserved.</span>
+            <div class="social-links">
+                <a href="https://wa.me/6281287411790" target="_blank" rel="noopener">Support</a>
+                <a href="./certificate.html">Certificate</a>
+            </div>
+        </div>
+    </footer>
 
+    <script>
+        const pelatihan = document.getElementById('pelatihan');
+        const tahun = document.getElementById('tahun');
+        const tabel = document.getElementById('tabelPeserta');
+        const tbody = document.getElementById('tbody');
 
-  <script>
-    const pelatihan = document.getElementById('pelatihan');
-    const tahun = document.getElementById('tahun');
-    const tabel = document.getElementById('tabelPeserta');
-    const tbody = document.getElementById('tbody');
+        // Modal
+        const modal = document.getElementById('phoneModal');
+        const phoneInput = document.getElementById('phoneInput');
+        const confirmBtn = document.getElementById('confirmBtn');
+        const cancelBtn = document.getElementById('cancelBtn');
+        let currentCert = null;
 
-    // Modal
-    const modal = document.getElementById('phoneModal');
-    const phoneInput = document.getElementById('phoneInput');
-    const confirmBtn = document.getElementById('confirmBtn');
-    const cancelBtn = document.getElementById('cancelBtn');
-    let currentCert = null;
-
-    // Load data dari JSON
-    let pesertaData = [];
-    fetch("peserta.json")
-      .then(res => res.json())
-      .then(data => {
-        pesertaData = data.peserta;   //ambil array di dalam key peserta
-      });
-
-    // Filter dan render data
-    function filterData() {
-      const p = pelatihan.value;
-      const t = tahun.value;
-      tbody.innerHTML = "";
-      let visible = 0;
-
-      pesertaData.forEach((item, index) => {
-        if ((!p || item.pelatihan === p) && (!t || item.tahun == t)) {
-          visible++;
-          const tr = document.createElement("tr");
-          tr.innerHTML = `
-            <td>${visible}</td>
-            <td>${item.nama}</td>
-            <td>${item.instansi}</td>
-            <td>${item.nomor_sertifikat}</td>
-            <td>${item.tanggal_lulus}</td>
-            <td><a href="${item.link_sertifikat}" class="download-link" data-phone="${item.phone}">Unduh</a></td>
-          `;
-          tbody.appendChild(tr);
-        }
-      });
-
-      tabel.classList.toggle('hidden', visible === 0);
-
-      // Re-bind download link click
-      document.querySelectorAll('.download-link').forEach(link => {
-        link.addEventListener('click', (e) => {
-          e.preventDefault();
-          currentCert = link;
-          phoneInput.value = "";
-          modal.style.display = "block";
+        // Load data dari JSON
+        let pesertaData = [];
+        fetch("peserta.json")
+        .then(res => res.json())
+        .then(data => {
+            pesertaData = data.peserta;   //ambil array di dalam key peserta
         });
-      });
-    }
 
-    pelatihan.addEventListener('change', () => {
-      tahun.disabled = pelatihan.value === "";
-      filterData();
-    });
-    tahun.addEventListener('change', filterData);
+        // Filter dan render data
+        function filterData() {
+        const p = pelatihan.value;
+        const t = tahun.value;
+        tbody.innerHTML = "";
+        let visible = 0;
 
-    // Modal logic
-    confirmBtn.addEventListener('click', () => {
-      const entered = phoneInput.value.trim();
-      const correct = currentCert.getAttribute('data-phone');
-      if (entered === correct) {
-        modal.style.display = "none";
-        window.open(currentCert.href, "_blank");
-      } else {
-        alert("Nomor HP tidak sesuai dengan data pendaftaran.");
-      }
-    });
-    cancelBtn.addEventListener('click', () => modal.style.display = "none");
-    window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; }
+        pesertaData.forEach((item, index) => {
+            if ((!p || item.pelatihan === p) && (!t || item.tahun == t)) {
+            visible++;
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+                <td>${visible}</td>
+                <td>${item.nama}</td>
+                <td>${item.instansi}</td>
+                <td>${item.nomor_sertifikat}</td>
+                <td>${item.tanggal_lulus}</td>
+                <td><a href="${item.link_sertifikat}" class="download-link" data-phone="${item.phone}">Unduh</a></td>
+            `;
+            tbody.appendChild(tr);
+            }
+        });
 
-    // console.log("Pilihan:", p, t);
-    // console.log("Hasil filter:", hasil);
-  </script>
+        tabel.classList.toggle('hidden', visible === 0);
+
+        // Re-bind download link click
+        document.querySelectorAll('.download-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+            e.preventDefault();
+            currentCert = link;
+            phoneInput.value = "";
+            modal.style.display = "block";
+            });
+        });
+        }
+
+        pelatihan.addEventListener('change', () => {
+        tahun.disabled = pelatihan.value === "";
+        filterData();
+        });
+        tahun.addEventListener('change', filterData);
+
+        // Modal logic
+        confirmBtn.addEventListener('click', () => {
+        const entered = phoneInput.value.trim();
+        const correct = currentCert.getAttribute('data-phone');
+        if (entered === correct) {
+            modal.style.display = "none";
+            window.open(currentCert.href, "_blank");
+        } else {
+            alert("Nomor HP tidak sesuai dengan data pendaftaran.");
+        }
+        });
+        cancelBtn.addEventListener('click', () => modal.style.display = "none");
+        window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; }
+    </script>
 </body>
+
 </html>

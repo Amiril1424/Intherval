@@ -1,80 +1,90 @@
-// Function to give alert when click submit
-function myFunction() {
-    alert("Thank You for Joining Us!");
-}
+document.querySelectorAll(".hero-slider").forEach((slider) => {
+    const slides = Array.from(slider.querySelectorAll(".slide"));
+    const dots = Array.from(slider.querySelectorAll(".dot"));
+    const prev = slider.querySelector(".prev");
+    const next = slider.querySelector(".next");
+    let activeIndex = 0;
+    let timerId;
 
-// Dark Mode
-function ubahMode() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-}
+    if (!slides.length) return;
 
-// Slide Show Methode 1
-let slideIndex = 0;
-showSlides(slideIndex);
+    const showSlide = (index) => {
+        activeIndex = (index + slides.length) % slides.length;
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
+        slides.forEach((slide, slideIndex) => {
+            slide.classList.toggle("is-active", slideIndex === activeIndex);
+        });
 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
+        dots.forEach((dot, dotIndex) => {
+            dot.classList.toggle("is-active", dotIndex === activeIndex);
+        });
+    };
 
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-}
+    const restartTimer = () => {
+        window.clearInterval(timerId);
+        timerId = window.setInterval(() => showSlide(activeIndex + 1), 7000);
+    };
 
-// Slider automation
-let slideIndex1 = 0;
-showSlides1();
+    prev?.addEventListener("click", () => {
+        showSlide(activeIndex - 1);
+        restartTimer();
+    });
 
-function showSlides1() {
-    let j;
-    let slides1 = document.getElementsByClassName("mySlides");
-    let dots1 = document.getElementsByClassName("dot");
-    for (j = 0; j < slides1.length; j++) {
-        slides1[j].style.display = "none";
-    }
-    slideIndex1++;
-    if (slideIndex1 > slides1.length) { slideIndex1 = 1 }
-    for (j = 0; j < dots1.length; j++) {
-        dots1[j].className = dots1[j].className.replace(" active", "");
-    }
-    slides1[slideIndex1 - 1].style.display = "block";
-    dots1[slideIndex1 - 1].className += " active";
-    setTimeout(showSlides1, 8000); // Change image every 2 seconds
-}
+    next?.addEventListener("click", () => {
+        showSlide(activeIndex + 1);
+        restartTimer();
+    });
 
-// Slider automation event
-let slideIndex2 = 0;
-showSlides2();
+    dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+            showSlide(index);
+            restartTimer();
+        });
+    });
 
-function showSlides2() {
-    let k;
-    let slides2 = document.getElementsByClassName("myevent");
-    let dots2 = document.getElementsByClassName("ev-dot");
-    for (k = 0; k < slides2.length; k++) {
-        slides2[k].style.display = "none";
-    }
-    slideIndex2++;
-    if (slideIndex2 > slides2.length) { slideIndex2 = 1 }
-    for (k = 0; k < dots2.length; k++) {
-        dots2[k].className = dots2[k].className.replace(" active", "");
-    }
-    slides2[slideIndex2 - 1].style.display = "block";
-    dots2[slideIndex2 - 1].className += " active";
-    setTimeout(showSlides2, 8000); // Change image every 2 seconds
-}
+    restartTimer();
+});
+
+document.querySelectorAll(".documentation-carousel").forEach((carousel) => {
+    const viewport = carousel.querySelector(".documentation-viewport");
+    const track = carousel.querySelector(".documentation-track");
+    const cards = Array.from(carousel.querySelectorAll(".documentation-card"));
+    const prev = carousel.querySelector(".carousel-prev");
+    const next = carousel.querySelector(".carousel-next");
+    let pageIndex = 0;
+
+    if (!viewport || !track || !cards.length || !prev || !next) return;
+
+    const getVisibleCards = () => {
+        const value = window.getComputedStyle(carousel).getPropertyValue("--visible-cards");
+        return Math.max(1, Number.parseInt(value, 10) || 1);
+    };
+
+    const updateCarousel = () => {
+        carousel.querySelectorAll("video").forEach((video) => video.pause());
+        const visibleCards = getVisibleCards();
+        const maxPage = Math.max(0, Math.ceil(cards.length / visibleCards) - 1);
+        pageIndex = Math.min(pageIndex, maxPage);
+        const targetIndex = Math.min(pageIndex * visibleCards, cards.length - 1);
+        const maxOffset = Math.max(0, track.scrollWidth - viewport.clientWidth);
+        const offset = Math.min(cards[targetIndex].offsetLeft, maxOffset);
+        track.style.transform = `translateX(-${offset}px)`;
+        prev.disabled = pageIndex === 0;
+        next.disabled = pageIndex === maxPage;
+    };
+
+    prev.addEventListener("click", () => {
+        pageIndex = Math.max(0, pageIndex - 1);
+        updateCarousel();
+    });
+
+    next.addEventListener("click", () => {
+        const visibleCards = getVisibleCards();
+        const maxPage = Math.max(0, Math.ceil(cards.length / visibleCards) - 1);
+        pageIndex = Math.min(maxPage, pageIndex + 1);
+        updateCarousel();
+    });
+
+    window.addEventListener("resize", updateCarousel);
+    updateCarousel();
+});
